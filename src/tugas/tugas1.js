@@ -48,6 +48,29 @@ function Tugas() {
         />
         <h1>{state}</h1>
       </div>
+
+      <div
+        style={{
+          backgroundColor: "#f2f",
+          height: 275,
+          borderRadius: 25,
+          paddingLeft: 5,
+        }}
+      >
+        <h1>Tugas Use Effect</h1>
+        {state2.length === 0 ? (
+          <p>Loading Data, Using UseEffect</p>
+        ) : (
+          state2.map((data, i) => {
+            return (
+              <div key={i}>
+                <span>{data.title.slice(0, 50) + "..."}</span>
+                <br />
+              </div>
+            );
+          })
+        )}
+      </div>
     </div>
   );
 }
